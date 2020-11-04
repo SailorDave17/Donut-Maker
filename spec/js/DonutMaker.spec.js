@@ -1,19 +1,19 @@
 let underTest;
 
-describe("FEATURE 1: Can Count Donuts.", () => {
+describe("FEATURE 1.1 - Have a way to count donuts.", () => {
   describe("Can add to donut count (1) and retrieve count (2)", () => {
     beforeEach(() => {
       underTest = new DonutMaker();
     });
 
-    it("0. Start with a click count of 0.", () => {
+    it("1. Start with a click count of 0.", () => {
       expect(underTest._donutCount).toBe(0);
     });
-    it("1. Add to click count.", () => {
+    it("2. Add to click count.", () => {
       underTest.recordClick();
       expect(underTest._donutCount).toBe(1);
     });
-    it("2. Add one click to the click count when it records a click.", () => {
+    it("3. Add one click to the click count when it records a click.", () => {
       underTest.recordClick();
       underTest.recordClick();
       expect(underTest._donutCount).toBe(2);
@@ -21,7 +21,7 @@ describe("FEATURE 1: Can Count Donuts.", () => {
   });
 });
 
-describe("FEATURE 2: Be able to purchase Auto Clicker with 100 donuts.", () => {
+describe("FEATURE 1.2 - Be able to purchase the first Auto Clicker with 100 donuts from your donut count.", () => {
   beforeEach(() => {
     underTest = new DonutMaker();
   });
@@ -41,7 +41,7 @@ describe("FEATURE 2: Be able to purchase Auto Clicker with 100 donuts.", () => {
   });
 });
 
-describe("Feature 3: The cost of each Auto Clicker will go up with each purchase.", () => {
+describe("Feature 1.3 - The cost of each Auto Clicker will go up with each purchase.", () => {
   beforeEach(() => {
     underTest = new DonutMaker();
     underTest.stashDonutsforTesting();
@@ -65,12 +65,12 @@ describe("Feature 3: The cost of each Auto Clicker will go up with each purchase
     expect(underTest.autoClickerCost).toBe(121);
   });
   describe("The Correct amount of donuts are subtracted per Auto-Clicker Purchase", () => {
-    it("3. Subtract the Auto Clicker cost from your donut count.", () => {
+    it("4. Subtract the Auto Clicker cost from your donut count.", () => {
       underTest.buyAutoClicker(); // ------> Subtracting 100
       underTest.buyAutoClicker(); // ------->Subtracting 100
       expect(underTest._donutCount).toBe(790);
     });
-    it("3. Subtract the Auto Clicker cost from your donut count.", () => {
+    it("4. Subtract the Auto Clicker cost from your donut count.", () => {
       underTest.buyAutoClicker(); // ------> Subtracting 100
       underTest.buyAutoClicker(); // -------> Subtracting 100
       underTest.buyAutoClicker(); // -------->Subtracting 110
@@ -79,29 +79,29 @@ describe("Feature 3: The cost of each Auto Clicker will go up with each purchase
   });
 });
 
-describe("Feature 4: Ensure that there are enough clicks to buy a Auto Clicker.", () => {
+describe("Feature 1.4 - Ensure that there are enough clicks to buy a Auto Clicker.", () => {
   beforeEach(() => {
     underTest = new DonutMaker();
   });
-  it("Prevent purchase of Auto Clicker counter if there are not enough donuts to purchase.", () => {
+  it("1. Prevent purchase of Auto Clicker counter if there are not enough donuts to purchase.", () => {
     underTest.buyAutoClicker();
     expect(underTest.autoClickersPurchased).toBe(0);
   });
 });
 
-describe("Feature 5: Ensure that there are enough clicks to buy a Auto Clicker.", () => {
+describe("Feature 1.5 - Ensure that there are enough clicks to buy a Auto Clicker.", () => {
   beforeEach(() => {
     underTest = new DonutMaker();
     underTest.stashDonutsforTesting();
   });
-  it("The amount of Auto Clickers affect the amount of donuts added when an * Activate Auto Clickers * event is called.", () => {
+  it("1. The amount of Auto Clickers affect the amount of donuts added when an * Activate Auto Clickers * event is called.", () => {
     underTest.buyAutoClicker();
     underTest.activateAutoClickers();
     expect(underTest._donutCount).toBe(901);
   });
 });
 
-// Iteration II -------------------------------------------
+// Iteration II ----------------------------------------------------------------------------------------------------
 
 describe("Feature 2.1 - Be able to purchase the first Donut Multiplier with 10 clicks from your click count.", () => {
   beforeEach(() => {
@@ -112,4 +112,20 @@ describe("Feature 2.1 - Be able to purchase the first Donut Multiplier with 10 c
     underTest.buyDonutMultiplier();
     expect(underTest._donutMultiplierCount).toBe(1);
   });
+
+  it("2. Subtract the amount of the Donut Multiplier cost from the donut count.", () => {
+    underTest.buyDonutMultiplier();
+    expect(underTest._donutCount).toBe(990);
+  });
+});
+describe("Feature 2.2 - The cost of each Donut Multiplier will go up with each purchase.", () => {
+  beforeEach(() => {
+    underTest = new DonutMaker();
+    underTest.stashDonutsforTesting();
+  });
+  // it("1. Increase the cost of the second Donut Multiplier by an additional ten percent. ", () => {
+  //   underTest.buyDonutMultiplier();
+  //   underTest.buyDonutMultiplier();
+  //   expect(underTest._donutMultiplierCost).toBe(11)
+  // });
 });
