@@ -144,11 +144,13 @@ describe("Feature 2.2 - The cost of each Donut Multiplier will go up with each p
         expect(underTest._donutMultiplierCost).toBeCloseTo(17.71561)
     });
 });
-// descripe("FEATURE 2.3 - Ensure that there are enough donuts to buy a Donut Multiplier.", () => {
-//             underTest = new DonutMaker();
-//             // underTest.stashDonutsforTesting();
-//             it("Prevent the Donut Multiplier count from going up if there are not enough donuts to purchase a Donut Multiplier.", () => {
-//                     underTest.buyDonutMultiplier(;
-//                     });
 
-//             });
+describe('FEATURE 2.3 : Ensure that there are enough donuts to buy a Donut Multiplier.', () => {
+    beforeEach(() => {
+        underTest = new DonutMaker();
+    });
+    it('Prevent the Donut Multiplier count from going up if there are not enough donuts to purchase a Donut Multiplier.', () => {
+        underTest.buyDonutMultiplier();
+        expect(underTest._donutMultiplierCount).toBe(0);
+    });
+});
