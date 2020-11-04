@@ -12,14 +12,26 @@ class DonutMaker {
         this._donutCount += 1000;
     }
 
+    oneAutoClickerToTest() {
+        this._numberOfAutoClickers += 1;
+    }
+
     recordClick() {
-        this._donutCount++;
+        if (this.donutMultiplierCount > 0) {
+            this._donutCount += Math.pow(1.2, this._donutMultiplierCount)
+        } else {
+            this._donutCount++
+        }
     }
     get clickCount() {
         return this._donutCount;
     }
     recordAutoClick() {
-        this._donutCount++;
+        var i = 0
+        while (i < this._numberOfAutoClickers) {
+            this._donutCount += Math.pow(1.2, this._donutMultiplierCount)
+            i++;
+        }
     }
     get autoClickCount() {
         return this._donutCount;
