@@ -191,6 +191,17 @@ describe("FEATURE 2.5 - The amount the subsequent Donut Multipliers click bonus 
         expect(underTest._donutCount).toBeCloseTo(968.625)
     });
 });
-// describe("FEATURE 6 : The Donut Multipliers click bonus will apply to clicks from the Auto Clicker", () => {
+describe("FEATURE 2.6 - The Donut Multipliers click bonus will apply to clicks from the Auto Clicker", () => {
+    beforeEach(() => {
+        underTest = new DonutMaker();
+        underTest.stashDonutsforTesting();
+    });
+    it("1. When an 'Add Auto Clickers' event is executed, increase the value of each Auto Clicker by the amount of the Donut Multiplier", () => {
+        underTest.buyDonutMultiplier();
+        underTest.buyDonutMultiplier();
+        underTest.recordAutoClick();
+        expect(underTest._donutCount).toBeCloseTo(979)
+    });
 
-//         }
+
+});
