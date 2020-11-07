@@ -33,9 +33,9 @@ const displayNumberOfAutoClickers = function(donut) {
     numberOfAutoClickersText.innerText = donut.autoClickCount;
 }
 
-const purchaseAutoClicker = document.querySelector(".auto-button");
-purchaseAutoClicker.addEventListener("click", () => {
-    userDonut.purchaseAutoClicker();
+const buyAutoClicker = document.querySelector(".auto-button");
+buyAutoClicker.addEventListener("click", () => {
+    userDonut.buyAutoClicker();
     updateDonutCount(userDonut);
     displayNumberOfAutoClickers(userDonut)
     displayAutoClickerCost(userDonut);
@@ -46,16 +46,16 @@ const displayAutoClickerCost = function(donut) {
     autoClickerCostText.innerText = "Cost: " + donut.autoClickerCost + " Donuts";
 }
 
-const displayMultiplierCount = function(donut) {
-    const multiplierCountText = document.querySelector(".multiplier-count");
-    multiplierCountText.innerText = donut.multiplierCount;
+const displayDonutMultiplierCount = function(donut) {
+    const DonutMultiplierCountText = document.querySelector(".multiplier-count");
+    DonutMultiplierCountText.innerText = donut.DonutMultiplierCount;
 }
 
-const purchaseMultiplier = document.querySelector(".multiplier-button");
-purchaseMultiplier.addEventListener("click", () => {
-    userDonut.purchaseMultiplier();
+const buyDonutMultiplier = document.querySelector(".multiplier-button");
+buyDonutMultiplier.addEventListener("click", () => {
+    userDonut.buyDonutMultiplier();
     updateDonutCount(userDonut);
-    displayMultiplierCount(userDonut);
+    displayDonutMultiplierCount(userDonut);
     displayMultiplierCost(userDonut);
     displayClickValue(userDonut);
 });
