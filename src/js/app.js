@@ -20,7 +20,7 @@ donutButton.addEventListener("click", () => {
 
 const updateAutoClickerCount = function (donutMaker) {
     const autoClickerCount = document.querySelector(".auto-clicker-count");
-    autoClickerCount.innerText = donutMaker.autoClickerCount;
+    autoClickerCount.innerText = "Auto Clickers Owned:" + donutMaker.autoClickerCount;
 };
 
 const purchaseAutoClickerButton = document.querySelector(".purchase-auto-clicker-button");
@@ -33,7 +33,8 @@ purchaseAutoClickerButton.addEventListener("click", () => {
 });
 const displayAutoClickerCost = function (donutMaker) {
     const autoClickerCost = document.querySelector(".auto-clicker-cost");
-    autoClickerCost.innerText = "Current Auto Clicker Cost:" + donutMaker.autoClickerCost;
+    autoClickerCost.innerText = "Auto Clicker Cost:" + donutMaker.autoClickerCost;
+
 };
 
 function updateAutoClickerButton(donutMaker) {
@@ -48,7 +49,7 @@ function updateAutoClickerButton(donutMaker) {
 
 const updateDonutMultiplierCount = function (donutMaker) {
     const donutMultiplierCount = document.querySelector(".donut-multiplier-count");
-    donutMultiplierCount.innerText = donutMaker.donutMultiplierCount;
+    donutMultiplierCount.innerText = "Multipliers Owned:" + donutMaker.donutMultiplierCount;
 };
 
 const purchaseDonutMultiplierButton = document.querySelector(".purchase-donut-multiplier-button");
@@ -62,7 +63,7 @@ purchaseDonutMultiplierButton.addEventListener("click", () => {
 
 const displayDonutMultiplierCost = function (donutMaker) {
     const donutMultiplierCost = document.querySelector(".donut-multiplier-cost");
-    donutMultiplierCost.innerText = "Current Donut Multiplier Cost:" + Math.round(donutMaker.donutMultiplierCost * 10) / 10;
+    donutMultiplierCost.innerText = "Donut Multiplier Cost:" + Math.round(donutMaker.donutMultiplierCost * 10) / 10;
 };
 
 function updateDonutMultiplierButton(donutMaker) {
