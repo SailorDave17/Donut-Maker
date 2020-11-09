@@ -4,55 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donut Maker</title>
-
-
+    <title>Module 4 Project Donut Maker</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
 </head>
 
-<body class="main-container ">
-    <header class="header">
-        <div class="dropdown">
-            <a class="company-info" href=CompanyInfo.html>Company Info</a>
-            <a>Developer Information</a>
-            <a class="inspiration" href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration
-                <p class="cookie">Click on the inspiration link to go to the website </p>
-            </a>
+<body>
+    <header>
+        <div class="title">
+            <h1 class="main-title">Fred the Baker Baking Company</h1>
         </div>
-        <h1>Donut Maker</h1>
+
+
+        <div class="backdrop">
+            <div class="modal">
+                <button class="exit-button">Close</button>
+                <h1>Dave Alvarado</h1>
+                <p>Get At Me!</p>
+               
+                <a href="https://sailordave17.github.io/">My Portfolio</a>
+                <a href="https://www.linkedin.com/in/david-r-alvarado17">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="backdrop2">
+            <div class="modal2">
+                <button class="exit-button2">Close</button>
+                <h1>Contact Us</h1>
+                
+                <a href="https://www.jollypiratedonutsoh.com/">Jolly Pirate</a>
+            </div>
+        </div>
+
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a class="about-us-button">Company Info</a>
+                    <a class="inspiration" href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Our
+                        Inspiration</a>
+                    <a class="developer-button">About the Developer</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="content">
 
+    <main>
+        <button class="donut">
+            <div class="donut-button">Make A Donut</div>
+        </button>
 
-        <div class="column1">
-            <div class=" text">
-                <h2 class="section-title">Donut Count:</h2>
-                <h2 class="donut-count">0</h2>
-            </div>
-            <button class="donut-button">Donut Button
-            </button>
+        <div class="donut-count-text">
+            You have made:
+            <div class="donut-count">0</div>
+            donuts
         </div>
 
+       <div class="donut-image">
+        <!-- <img src="src/assets/donut-without-background.png" width=1500px> -->
+    </div>
+        <button class="purchase-auto-clicker-button">Buy Auto Clicker</button>
 
-        <div class="column2">
-            <div class="auto-clickers text">
-                <h2 class="section-title">Auto Clickers:</h2>
-                <h2 class="auto-clicker-count">0</h2>
-                <button class="buy-auto-button">Buy Auto Clicker</button>
-                <h3 class="auto-clicker-cost">Cost: 100 Donuts</h3>
-            </div>
-            <div class="multiplier text">
-                <h2 class="section-title">Multipliers:</h2>
-                <h2 class="multiplier-count">0</h2>
-                <button class="buy multiplier-button">Buy Multiplier</button>
-                <h3 class="multiplier-cost">Cost: 10 Donuts</h3>
-            </div>
+        <div class="auto-clicker-text">
+            <div class="auto-clicker-cost">Current Auto Clicker Cost: 100 Donuts</div>
+            <div class="auto-clicker-count">Clicker Total:0</div>
         </div>
 
+        <button class="purchase-donut-multiplier-button">Buy Donut Multiplier </button>
 
+        <div class="donut-multiplier-text">
+            <div class="donut-multiplier-cost">Current Donut Multiplier Cost: 10 donuts</div>
+            <div class="donut-multiplier-count">Donut Multiplier Total:0</div>
+        </div>
+
+        <button class="reset">
+            <div class="reset-game">Reset</div>
+        </button>
+        </div>
     </main>
-    <script src="/src/js/app.js " type="module"></script>
 
-</body>
+    <div class="container">
+        <div class="anchor"></div>
+    </div>
+    <script src="/src/js/app.js" type="module"></script>
 </body>
 
 </html>
