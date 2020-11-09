@@ -37,7 +37,7 @@ const displayAutoClickerCost = function (donutMaker) {
 };
 
 function updateAutoClickerButton(donutMaker) {
-    const lightUpPurchaseAutoClickerButton = document.querySelector(".purchase-auto-clicker-button") //semicolon
+    const lightUpPurchaseAutoClickerButton = document.querySelector(".purchase-auto-clicker-button");
     lightUpPurchaseAutoClickerButton.classList.add('gray-out-auto-clicker-button');
     if (donutMaker.donutCount < donutMaker.autoClickerCost) {
         lightUpPurchaseAutoClickerButton.classList.toggle('gray-out-auto-clicker-button');
@@ -66,7 +66,7 @@ const displayDonutMultiplierCost = function (donutMaker) {
 };
 
 function updateDonutMultiplierButton(donutMaker) {
-    const lightUpPurchaseDonutMultiplierButton = document.querySelector(".purchase-donut-multiplier-button")//semicolon
+    const lightUpPurchaseDonutMultiplierButton = document.querySelector(".purchase-donut-multiplier-button");
     lightUpPurchaseDonutMultiplierButton.classList.add('gray-out-donut-multiplier-button');
     if (donutMaker.donutCount < donutMaker.donutMultiplierCost) {
         lightUpPurchaseDonutMultiplierButton.classList.toggle('gray-out-donut-multiplier-button');
