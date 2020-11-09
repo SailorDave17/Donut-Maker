@@ -38,7 +38,11 @@ get autoClickerCost() {
   return this._autoClickerCost;
 }
 activateAutoClickers() {
-  this._donutCount = this._donutCount + this._autoClickerCount * Math.pow(1.2, this._donutMultiplierCount);
+  if (this.donutMultiplierCount >= 1) {
+      this._donutCount += Math.pow(1.2, this._donutMultiplierCount) * this._autoClickerCount;
+  } else {
+      this._donutCount += this._autoClickerCount;
+  }
 }
 
 
