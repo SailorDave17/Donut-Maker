@@ -78,7 +78,7 @@ html {
 
 .donut {
   background-color: rgb(209, 52, 52); 
-  border: none;
+  border: solid;
   color: white;
   padding: 30px;
   text-align: center;
@@ -92,7 +92,7 @@ html {
 
 .purchase-auto-clicker-button {
   background-color: rgb(226, 43, 43); 
-  border: none;
+  border: solid;
   color: white;
   padding: 30px;
   text-align: center;
@@ -107,7 +107,7 @@ html {
 
 .purchase-donut-multiplier-button {
     background-color: rgb(226, 43, 43); 
-    border: none;
+    border: solid;
     color: white;
     padding: 30px;
     text-align: center;
@@ -122,7 +122,7 @@ html {
 
 .reset {
     background-color: rgb(21, 175, 67); 
-    border: none;
+    border: solid;
     color: white;
     padding: 30px;
     text-align: center;
@@ -149,7 +149,7 @@ html {
 
 .donut-count-text {
     background-color: rgb(224, 214, 71); 
-    border: none;
+    border: solid;
     color: white;
     padding: 30px;
     text-align: center;
@@ -175,7 +175,7 @@ html {
 
 .auto-clicker-text {
     background-color:rgb(74, 187, 52); 
-    border: none;
+    border: solid;
     color: white;
     padding: 30px;
     text-align: center;
@@ -200,7 +200,7 @@ html {
 
 .donut-multiplier-text {
     background-color: rgb(48, 184, 48); 
-    border: none;
+    border: solid;
     color: white;
     padding: 30px;
     text-align: center;
